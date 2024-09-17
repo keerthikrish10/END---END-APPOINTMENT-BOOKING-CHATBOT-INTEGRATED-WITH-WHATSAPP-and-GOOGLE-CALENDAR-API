@@ -1,0 +1,2 @@
+from db_integration import create_patient_table
+create_patient_table()
