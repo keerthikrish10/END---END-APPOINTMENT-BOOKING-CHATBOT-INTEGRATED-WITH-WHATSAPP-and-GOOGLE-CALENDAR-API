@@ -5,6 +5,8 @@ Project Overview
 This project is a Doctor Appointment Booking Chatbot built using Twilio's WhatsApp API, Flask, and Google Calendar API. The chatbot enables patients to schedule appointments with doctors through WhatsApp. It first collects the patient's preferred doctor type, location, and desired appointment date/time. If the selected time slot is unavailable, it retrieves available slots from the doctor's Google Calendar. After the appointment is booked, the chatbot gathers the patient's personal information (name, email, age, gender) and stores it in a database, along with the appointment details.
 
 Key Features
+
+
 WhatsApp Chatbot: Interact with patients over WhatsApp to schedule appointments.
 Doctor Selection: Patients can specify the type of doctor they want to book.
 Location and Time Input: The bot collects the location, date, and time preferences from the patient.
@@ -24,7 +26,10 @@ doctor-appointment-bot/
 ├── .env                # Stores Twilio and Google API credentials securely.
 ├── templates/          # (Optional) HTML templates for any web-based interactions.
 └── static/             # (Optional) Static files like images, CSS, and JavaScript.
-Prerequisites
+
+
+Prerequisites:
+
 Python 3.x
 Twilio Account (for WhatsApp API)
 Google Calendar API access
@@ -33,15 +38,15 @@ SQLite (or any other database)
 Setup Instructions
 Step 1: Clone the Repository
 bash
-Copy code
-git clone https://github.com/yourusername/doctor-appointment-bot.git
+
 cd doctor-appointment-bot
 Step 2: Create a Virtual Environment
 bash
-Copy code
+
 python -m venv venv
 source venv/bin/activate   # On macOS/Linux
 venv\Scripts\activate      # On Windows
+
 Step 3: Install Dependencies
 bash
 Copy code
@@ -57,13 +62,16 @@ TWILIO_WHATSAPP_NUMBER=whatsapp:+your_twilio_whatsapp_number
 GOOGLE_CLIENT_ID=your_google_client_id
 GOOGLE_CLIENT_SECRET=your_google_client_secret
 GOOGLE_CALENDAR_ID=doctor_calendar_id
+
 Step 5: Set Up Google Calendar API
 Follow Google Calendar API Documentation to enable the API and get your credentials.
 Add your Google Calendar credentials in the .env file.
+
 Step 6: Run the Flask App
 bash
 Copy code
 python app.py
+
 Step 7: Expose Your Local Server (for testing with Twilio)
 To expose your Flask app to the internet for Twilio to communicate, use ngrok:
 
@@ -80,7 +88,9 @@ Send "hello" via WhatsApp to start interacting with the chatbot.
 Follow the chatbot's guided steps to book an appointment, choose a doctor type, location, and appointment time.
 If the requested time is unavailable, the bot will offer alternative time slots from Google Calendar.
 After booking, provide your personal details (name, email, age, gender) to complete the process.
-Technologies Used
+
+
+Technologies Used:
 Python: Backend logic with Flask.
 Twilio: WhatsApp API for messaging.
 Google Calendar API: To manage doctor availability.
